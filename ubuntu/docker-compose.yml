@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  myubuntu20:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /ssh:.ssh
+      - ~/.zshrc:.zshrc"
+      - "~/.vscode:.vscode"
+      - "~/.zsh_profile:.zsh_profile"
+      - "~/.zsh_history:.zsh_history"
+    ports:
+      - 8000:8000

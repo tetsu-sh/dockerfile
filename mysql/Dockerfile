@@ -1,4 +1,4 @@
-FROM mysql
+FROM mysql:5.7
 
 ENV MYSQL_ROOT_PASSWORD rootpass
 ENV MYSQL_DATABASE test
