@@ -1,8 +1,9 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
-ARG $USER_NAME=tetsu-sh
-ARG $USER_UID=1100
-ARG $USER_GID=${$USER_UID}
+ARG USERNAME=tetsu-sh
+ARG GROUPNAME=user
+ARG UID=1000
+ARG GID=1000
 
 # COPY ["~/.zshrc","~/.vscode" , "~/.zsh_profile","~/.zsh_history"]
 # COPY /ssh/ .ssh/
@@ -24,6 +25,11 @@ RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv && cd ~/.pyenv && src/
 # poetry
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
+# install broot
+# navi
+# skim
+# zoxide
+RUN curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
 # docker install
 RUN apt-get install -y \
