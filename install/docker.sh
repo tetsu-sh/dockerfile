@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get -y install \
  ca-certificates \
  curl \
  gnupg \
@@ -16,4 +16,7 @@ sudo apt-get update
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+sudo usermod -g docker $USER
+sudo systemctl restart docker.service

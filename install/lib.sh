@@ -4,4 +4,4 @@ apt-get install -y zsh
 apt-get install -y iputils-ping net-tools dnsutils
 
 
-RUN curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
