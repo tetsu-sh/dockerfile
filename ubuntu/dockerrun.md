@@ -18,3 +18,8 @@ apt install libncursesw5-dev libgdbm-dev libc6-dev libctypes-ocaml-dev zlib1g-de
 apt install libssl1.1 libssl1.1=1.1.1f-1ubuntu2 libssl-dev libmysqlclient-dev
 apt install librust-libsodium-sys-dev
 sudo apt-get install bzip2 libffi-dev lzma lzma-dev libreadline-dev libbz2-dev liblzma-dev
+
+# git editor
+
+- nano になっているので
+- git config --global core.editor vim
