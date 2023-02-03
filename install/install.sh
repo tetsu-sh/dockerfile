@@ -8,6 +8,7 @@ apt-get install -y iputils-ping net-tools dnsutils
 apt-get install -y mysql-client
 
 
+
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 
 
@@ -59,3 +60,5 @@ sudo apt-get install -y bzip2 libffi-dev lzma lzma-dev libreadline-dev libbz2-de
 
 #rust
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+# diesel で引っかかる
+sudo apt-get install libpq-dev
