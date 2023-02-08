@@ -1,5 +1,6 @@
 - docker outside docker
-- docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.ssh:$HOME/.ssh --name myubuntu22 myubuntu22
+- docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.ssh:$HOME/.ssh -v $HOME/workspace:$HOME/workspace --name myubuntu20 ubuntu20
+
   <!-- restartはダメ -->
   <!-- - docker restart -v /var/run/docker.sock:/var/run/docker/sock -v ~/.ssh:~/.ssh myubuntu22 -->
 
@@ -23,3 +24,6 @@ sudo apt-get install bzip2 libffi-dev lzma lzma-dev libreadline-dev libbz2-dev l
 
 - nano になっているので
 - git config --global core.editor vim
+# arch
+cargo でエラー
+apt-get install pkg-config
