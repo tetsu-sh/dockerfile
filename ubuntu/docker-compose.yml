@@ -1,13 +1,15 @@
 version: "3.8"
 
 services:
-  myubuntu22:
+  myubuntu20s:
+    tty: true
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ~/.ssh:/.ssh
+      - $HOME/.ssh:/root/.ssh
+      - $HOME/workspace:/root/workspace
+      # mysqld.sockもやるか？
+      # .zshrcとかもマウントした
       # - "~/.vscode:.vscode"
-    ports:
-      - 8000:8000
