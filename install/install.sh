@@ -42,7 +42,8 @@ sudo apt-get update
 
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-sudo usermod -g docker $USER
+sudo gpasswd -a $USER docker
+cat /etc/group | grep docker
 sudo systemctl restart docker.service
 
 
