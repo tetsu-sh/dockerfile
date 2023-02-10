@@ -4,7 +4,7 @@ services:
   myubuntu20s:
     tty: true
     build:
-      context: .
+      context: ./ubuntu
       dockerfile: Dockerfile
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -13,3 +13,8 @@ services:
       # mysqld.sockもやるか？
       # .zshrcとかもマウントした
       # - "~/.vscode:.vscode"
+  mymysql:
+    build:
+      context: mysql
+      dockerfile: Dockerfile
+
