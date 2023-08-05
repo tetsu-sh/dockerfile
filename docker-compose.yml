@@ -9,10 +9,26 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - $HOME/.ssh:/root/.ssh
+      - $HOME/workspace/a:/root/workspace/a
+      - $HOME/workspace/own:/root/workspace/own
+
+      # mysqld.sockもやるか？
+      # .zshrcとかもマウントしたi
+      # - "~/.vscode:.vscode"
+  myubuntu20s-amd:
+    platform: linux/x86_64
+    tty: true
+    build:
+      context: ./ubuntu
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $HOME/.ssh:/root/.ssh
       - $HOME/workspace:/root/workspace
+
       # mysqld.sockもやるか？
       # .zshrcとかもマウントした
-      # - "~/.vscode:.vscode"
+      # - "~/.vscode:.vscode" 
   mymysql:
     build:
       context: mysql

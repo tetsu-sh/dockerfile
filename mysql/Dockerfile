@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 mysql:5.7
+FROM --platform=linux/amd64 mysql:8.0
 
 ENV MYSQL_ROOT_PASSWORD rootpass
 ENV MYSQL_DATABASE test

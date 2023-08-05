@@ -1,5 +1,5 @@
 - docker outside docker
-- docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.ssh:$HOME/.ssh -v $HOME/workspace:$HOME/workspace --name myubuntu20 ubuntu20
+- docker run -it -d -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.ssh:$HOME/.ssh -v $HOME/workspace:$HOME/workspace/own -v $HOME/workspace:$HOME/workspace/a --name myubuntu20 ubuntu20
 
   <!-- restartはダメ -->
   <!-- - docker restart -v /var/run/docker.sock:/var/run/docker/sock -v ~/.ssh:~/.ssh myubuntu22 -->
@@ -9,6 +9,9 @@
 
 - docker install in container
 - curl -fsSL https://download.docker.com/linux/static/stable/x86_64/docker-20.10.8.tgz | tar -xzC /usr/local/bin --strip=1 docker/docker
+
+
+- host.docker.internalでdocker networkを飛び回れる
 
 # python install
 

@@ -5,10 +5,9 @@ ARG GROUPNAME=user
 ARG UID=1000
 ARG GID=1000
 
-COPY ["$HOME/.zshrc" , "$HOME/.zsh_profile","$HOME/.zsh_history","$HOME/.vimrc","$HOME/.bash_profile","$HOME/.bashrc"]
-# vscode-extentions
-COPY $HOME/workspace .workspace
-COPY $HOME/.ssh .ssh
+# COPY ["$HOME/.zshrc" , "$HOME/.zsh_profile","$HOME/.zsh_history","$HOME/.vimrc","$HOME/.bash_profile","$HOME/.bashrc"]
+# COPY $HOME/workspace .workspace
+# COPY $HOME/.ssh .ssh
 
 
 RUN apt-get update
