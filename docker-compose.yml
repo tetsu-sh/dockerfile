@@ -1,6 +1,20 @@
 version: "3.8"
 
 services:
+  myubuntu20m:
+    tty: true
+    build:
+      context: ./ubuntu
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - $HOME/.ssh:/root/.ssh
+      - $HOME/workspace/m:/root/workspace/m
+      - $HOME/workspace/own:/root/workspace/own
+
+      # mysqld.sockもやるか？
+      # .zshrcとかもマウントしたi
+      # - "~/.vscode:.vscode"
   myubuntu20s:
     tty: true
     build:
@@ -29,8 +43,17 @@ services:
       # mysqld.sockもやるか？
       # .zshrcとかもマウントした
       # - "~/.vscode:.vscode" 
-  mymysql:
+  mymysql80:
     build:
       context: mysql
       dockerfile: Dockerfile
+    ports:
+    - 33306:3306
+
+  mymysql57:
+    build:
+      context: mysql
+      dockerfile: Dockerfile.5.7
+    ports:
+    - 33306:3306
 
